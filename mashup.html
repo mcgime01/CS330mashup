@@ -10,14 +10,13 @@
 </head>
 <body onload = "initwikiload(); initforcast()">
     <header>
-      <span><img src="wanderlust.jpg" alt="Wanderlust"/></span>
+      <img src="http://knuth.luther.edu/~husoke01/wanderlust.jpg" alt="Wanderlust" style="width:100%;height:500px;"/>
     </header>
     <div class='intro'>
         <h1>United States Travel Information all in One Location</h1>
         <p>Instructions: Search for a city and state to recieve weather reports, Wikipedia information, and maps.</p>
     <div class='search'>
       <input type="text" id="inputcity" name="search" value="" onkeyup="" placeholder="Enter City">
-      <!--<input type="text" id="inputstate" placeholder="Enter State">-->
       <input type="text" list="states" id="inputstate">
       <datalist id="states">
          <option value="Alabama"></option>
@@ -74,28 +73,28 @@
       <input type="button" id="searchbutton" value="Search" onclick="wikiloadwithinput();GetLocation();forcast()">
     </div>
   </div>
-		<div class="container">
-			<section class='map'>
-				<h3>Maps</h3>
+    <div class = "top">
+      <section class='weather'>
+			  <h3>Weather Reports</h3>
+			  <div id="weatherpic">
+        </div>
+			</section>
+		</div>
+    <div class="middle">
+      <section class='map'>
+        <h3>Maps</h3>
           <div id="map"></div>
           <script async defer
           src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwVrKHyeaqZTTPWaeC7FFGedkZN9-no04&callback=initMap">
           </script>
       </section>
-			<section id="wiki" class='wiki'>
-				<h3>Wikipedia Information</h3>
-				<div id="article">
-				</div>
-			</section>
-      <section class='weather'>
-			  <h3>Weather Reports</h3>
-			  <div id="weatherpic" class = 'weather'>
-          <p>
-            <pre id="weatherinfo" style="font-family:verdana;">
-            </pre>
-          </p>
+    </div>
+    <div class="bottom">
+      <section id="wiki" class='wiki'>
+        <h3>Wikipedia Information</h3>
+        <div id="article">
         </div>
-			</section>
-		</div>
+      </section>
+    </div>
 </body>
 </html>
