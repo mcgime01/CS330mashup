@@ -133,8 +133,8 @@ function initforcast() {
         var temp_f = parsed_json['current_observation']['temp_f'];
         var weather = parsed_json['current_observation']['weather'];
         var wind = parsed_json['current_observation']['wind_string'];
-        var textstuff = ("The current weather for " + location + " is " + temp_f + " degrees fahrenheit and " + weather + " with wind " + wind)
-        $('#weatherinfo').html(textstuff);
+        var textstuff = ("The current weather for " + location + " is " + temp_f + " degrees fahrenheit and " + weather + " with wind " + wind);
+        $('#weatherpic').html(textstuff);
       }
   });
 };
@@ -154,7 +154,7 @@ function forcast() {
         var weather = parsed_json['current_observation']['weather'];
         var wind = parsed_json['current_observation']['wind_string'];
         var textstuff = ("The current weather for " + location + " is " + temp_f + " degrees fahrenheit and " + weather + " with wind " + wind)
-        $('#weatherinfo').html(textstuff);
+        $('#weatherpic').html(textstuff);
       }
   });
 };
